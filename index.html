@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="JS/index.js"></script>
+        <style>
+            body {
+                overflow:hidden;
+            }
+            .container {
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+            }
+            .game-btn {
+                width: 60%;
+                padding: 2em 0;
+                text-align: center;
+                font-size: 2em;
+                border: 10px solid;
+                border-image-slice: 1;
+                border-width: 3px;
+                border-image-source: linear-gradient(-170deg, #00c1fc77, #00c1fc11, #00c1fc77, #00c1fc11);
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="background"></div>
+
+        <div class="container">
+            <a href="game.html" class="game-btn"><div>
+                Number Wheel
+            </div></a>
+    
+            <a href="clickcounter.html" class="game-btn"><div>
+                Starclicker
+            </div></a>
+
+
+
+        </div>
+    </body>
+</html>
