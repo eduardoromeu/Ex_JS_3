@@ -24,7 +24,7 @@ function Spin() {
 
     spinBtn.disabled = true;
     wheelImg.style.transition = '2s all';
-    wheelImg.style.transform = 'rotate(360deg)';
+    wheelImg.style.transform = 'rotate(1440deg)';
 
     let doAnim = window.setInterval(() => {
         wheelImg.style.transition = '0s all';

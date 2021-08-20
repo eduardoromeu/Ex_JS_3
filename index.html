@@ -3,47 +3,34 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Home</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.css">
-        <link rel="stylesheet" href="style.css">
-        <script src="JS/index.js"></script>
-        <style>
-            body {
-                overflow:hidden;
-            }
-            .container {
-                min-height: 100vh;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: space-around;
-            }
-            .game-btn {
-                width: 60%;
-                padding: 2em 0;
-                text-align: center;
-                font-size: 2em;
-                border: 10px solid;
-                border-image-slice: 1;
-                border-width: 3px;
-                border-image-source: linear-gradient(-170deg, #00c1fc77, #00c1fc11, #00c1fc77, #00c1fc11);
-            }
-        </style>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/index.css">
+        <script src="JS/functions.js"></script>
     </head>
 
     <body>
-        <div class="background"></div>
-
         <div class="container">
+            <div class="title">
+                <h1 class="clock-text effect">Select Game</h1>
+            </div>
+
             <a href="game.html" class="game-btn"><div>
-                Number Wheel
+                <p class="clock-text effect">Number Wheel</p>
             </div></a>
     
             <a href="clickcounter.html" class="game-btn"><div>
-                Starclicker
+                <p class="clock-text effect">Starclicker</p>
             </div></a>
 
-
+            <div class="date-div">
+                <h2 class="clock-text date">XX/XX/XXXX</h2>
+                <h2 class="clock-text time">XX:XX:XX</h2>
+            </div>
 
         </div>
+
+        <script src="JS/index.js" onload="ChangeLetter()"></script>
     </body>
 </html>

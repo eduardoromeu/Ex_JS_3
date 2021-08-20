@@ -1,0 +1,72 @@
+:root {
+  --inputcol: #FFFFFF38;
+  --disabledinputcol: #88888838;
+  --boxcol: #000000AA;
+  --wshadow: 2px 5px 10px #7958584d;
+}
+  
+html {
+  font-family: sans-serif;
+  color: white;
+  background-color: black;
+}
+
+body {
+  height: 100vh;
+}
+  
+a {
+  color: lightskyblue;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2.5em;
+}
+
+p, label, input, button{
+  margin: .2em;
+  -webkit-appearance: none;
+}
+
+input {
+  padding: .5em;
+  outline: none;
+  border: none;
+  background-color: var(--inputcol);
+  border-radius: 100em;
+  color: white;
+  text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+button {
+  padding: .4em 1em;
+  background-color: var(--inputcol);
+  border: none;
+  color: white;
+  border-radius: 100em;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: var(--disabledinputcol);
+  cursor: initial;
+}
+
+.hidden {
+  display: none;
+}
