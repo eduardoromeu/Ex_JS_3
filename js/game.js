@@ -45,4 +45,19 @@ function Spin() {
 function ResetConf() {
     FillInput(confHighNum, 100);
     FillInput(confLowNum, 0);
+    let doAnim = window.setInterval(() => {
+        wheelImg.style.transition = '0s all';
+        wheelImg.style.transform = 'rotate(0deg)';
+        spinBtn.disabled = false;
+        SetText(resTxt, resString);
+        SetText(resNum, rnd);
+        SetText(resTotal, `Total de Acertos: ${totalHits}`);
+        Show(homeBtn);
+        clearInterval(doAnim);
+    }, 2500);
+}
+
+function ResetConf() {
+    FillInput(confHighNum, 100);
+    FillInput(confLowNum, 0);
 }
