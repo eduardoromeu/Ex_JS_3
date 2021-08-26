@@ -8,18 +8,21 @@ const resTotal = document.getElementsByClassName("resTotal")[0];
 const wheelImg = document.getElementsByClassName("wheel-img")[0];
 const homeBtn = document.getElementsByClassName("hidden")[0];
 let totalHits = 0;
+let resString;
 
 function Spin() {
+    let maxNum = AssignInput(confHighNum);
+    let minNum = AssignInput(confLowNum);
     const usrNum = AssignInput(numInput);
-    const maxNum = AssignInput(confHighNum);
-    const minNum = AssignInput(confLowNum);
-    let resString;
 
     const rnd = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
 
+    if(localStorage.getItem(`totalHits${minNum}${maxNum}`) !== null)
+        totalHits = localStorage.getItem(`totalHits${minNum}${maxNum}`); else totalHits = 0;
+
     if(usrNum == rnd) {
         resString = `Você acertou!`;
-        totalHits += 1;
+        totalHits++;
     } else { resString = `Você errou!` }
 
     spinBtn.disabled = true;
@@ -34,6 +37,7 @@ function Spin() {
         SetText(resNum, rnd);
         SetText(resTotal, `Total de Acertos: ${totalHits}`);
         Show(homeBtn);
+        localStorage.setItem(`totalHits${minNum}${maxNum}`, totalHits);
         clearInterval(doAnim);
     }, 2500);
 }

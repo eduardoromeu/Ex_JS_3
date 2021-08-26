@@ -1,0 +1,141 @@
+@font-face {
+    font-family: "bubbleboddy";
+    src: url(../fonts/bubbleboddy.fat.ttf);
+}
+html {
+    background-color: #050505;
+    text-align: center;
+}
+
+body {
+    overflow: hidden;
+    font-family: "bubbleboddy", sans-serif;
+}
+
+.background {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+}
+
+.stars{
+	position: relative;
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	box-shadow: 
+    10vw -38vh white,
+    2vw -45vh white,
+    -5vw -26vh white,
+    3vw -18vh white,
+    10vw -2vh white,
+    -3vw 2vh white,
+    7vw 13vh white,
+    0vw 24vh white,
+    5vw 39vh white,
+    -8vw 45vh white;
+    animation: anim-stars 20s linear infinite;
+}
+
+.stars::after{
+    content: " ";
+    position: absolute;
+    right: 100vw;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+	box-shadow: 
+    10vw -38vh white,
+    2vw -45vh white,
+    -5vw -26vh white,
+    3vw -18vh white,
+    10vw -2vh white,
+    -3vw 2vh white,
+    7vw 13vh white,
+    0vw 24vh white,
+    5vw 39vh white,
+    -8vw 45vh white;
+  }
+
+@keyframes anim-stars {
+    from {
+        transform: translateX(-10vw);
+    }
+    to {
+        transform: translateX(110vw);
+    }
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.star-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+}
+
+.star-div img {
+    height: 10%;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+/* https://www.treinaweb.com.br/blog/como-fazer-animacao-infinita-de-fundo-com-css/ */
+
+@media screen and (max-width: 850px) {
+    .stars{
+        box-shadow: 
+        40vw -38vh white,
+        8vw -45vh white,
+        -20vw -26vh white,
+        12vw -18vh white,
+        40vw -2vh white,
+        -12vw 2vh white,
+        28vw 13vh white,
+        0vw 24vh white,
+        20vw 39vh white,
+        -32vw 45vh white;
+        animation: anim-stars 10s linear infinite;
+    }
+    
+    .stars::after{
+        right: 150vw;
+        box-shadow: 
+        20vw -38vh white,
+        4vw -45vh white,
+        -10vw -26vh white,
+        6vw -18vh white,
+        20vw -2vh white,
+        -6vw 2vh white,
+        14vw 13vh white,
+        0vw 24vh white,
+        10vw 39vh white,
+        -16vw 45vh white;
+    }
+
+    .background {
+        height: 100vh;
+        width: 200vw;
+    }
+
+    @keyframes anim-stars {
+        from {
+            transform: translateX(-50vw);
+        }
+        to {
+            transform: translateX(150vw);
+        }
+    }
+}
